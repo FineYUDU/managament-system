@@ -1,0 +1,32 @@
+{
+    "msn-error":{
+		"required":"Este campo es requerido",
+        "minLength3":"Mínimo 3 caracteres",
+		"minLength10":"Mínimo 10 caracteres",
+		"pattern":"Formato no valido",
+		"notEqual":"Contraseñas no hacen match",
+        "userError":"Usuario o contraseña invalido"
+	},
+    "buttons":{
+        "login":"Inicia sesión",
+        "back":"Volver",
+        "send":"Enviar",
+        "join":"Unirse",
+        "google":"Unirse con Google",
+        "discord":"Unirse con Discord"
+    },
+    "auth": {
+        "login":{
+            "title":"Iniciar sesión",
+            "username":"usuario | correo",
+            "password":"contraseña",
+            "password-confirm":"confirma tu contraseña",
+            "or":"ó",
+            "forgot":"¿Olvidaste tu contraseña?",
+            "create":"Crear una cuenta"
+        },
+        "create-account": {
+            "policity"  :"Estoy de acuerdo con las políticas de uso en BattleTimes"
+        }
+    }
+}

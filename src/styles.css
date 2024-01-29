@@ -1,1 +1,275 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/variables.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+    font-weight: var(--font-medium);
+    color: var(--color-primary);
+}
+a {
+    text-decoration: none;
+}
+button {
+    border: none;
+}
+
+/* ? HELPERS -----------------------------------> */
+.cursor_pointer {
+    cursor: pointer;
+}
+.link_primary {
+    color: var(--color-link);
+    text-decoration: underline;
+}
+.none {
+    display: none;
+}
+/* ? FONTS -----------------------------------> */
+/* * Font Size */
+.font_h1 {
+    font-size: var(--font-h1);
+}
+.font_h1-5 {
+    font-size: var(--font-h1-5);
+}
+.font_h2 {
+    font-size: var(--font-h2);
+}
+.font_h3 {
+    font-size: var(--font-h3);
+}
+.font_h4 {
+    font-size: var(--font-h4);
+}
+.font_body {
+    font-size: var(--font-body);
+}
+.font_label {
+    font-size: var(--font-label);
+}
+/* * Font Wight */
+.font_light {
+    font-weight: var(--font-light);
+}
+.font_regular {
+    font-weight: var(--font-regular);
+}
+.font_medium {
+    font-weight: var(--font-medium);
+}
+.font_semibold {
+    font-weight: var(--font-semibold);
+}
+.font_bold {
+    font-weight: var(--font-bold);
+}
+.font_extrabold {
+    font-weight: var(--font-extrabold);
+}
+/* ? COLORS -----------------------------------> */
+/* * Color font */
+.color_primary_txt {
+    color: var(--color-primary-txt);
+}
+.color_primary {
+    color: var(--color-primary);
+}
+.color_primary-0 {
+    color: var(--color-primary-0);
+}
+.color_primary-50 {
+    color: var(--color-primary-50);
+}
+.color_primary-100 {
+    color: var(--color-primary-100);
+}
+.color_primary-200 {
+    color: var(--color-primary-200);
+}
+.color_primary-300 {
+    color: var(--color-primary-300);
+}
+.color_primary-400 {
+    color: var(--color-primary-400);
+}
+.color_txt_bg {
+    color: var(--color-bg);
+}
+/* * Color bg */
+.color_bg {
+    background-color: var(--color-bg);
+    transition: var(--transition-bg-color);
+}
+.color_bg_container {
+    background-color: var(--color-container);
+    transition: var(--transition-bg-color);
+}
+.color_bg_primary {
+    background-color: var(--color-primary);
+    transition: var(--transition-bg-color);
+}
+.color_bg_primary-50 {
+    background-color: var(--color-primary-50);
+    transition: var(--transition-bg-color);
+}
+.color_bg_primary-100 {
+    background-color: var(--color-primary-100);
+    transition: var(--transition-bg-color);
+}
+.color_bg_primary-200 {
+    background-color: var(--color-primary-200);
+    transition: var(--transition-bg-color);
+}
+.color_bg_primary-300 {
+    background-color: var(--color-primary-300);
+    transition: var(--transition-bg-color);
+}
+.color_bg_primary-400 {
+    background-color: var(--color-primary-400);
+    transition: var(--transition-bg-color);
+}
+/* ? BUTTONS -----------------------------> */
+/* * PRIMARY -----------------------------> */
+.btn_primary {
+    padding: 15px;
+    background-color: var(--color-btn-primary-default);
+    border-radius: 25px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: var(--color-btn-primary-txt);
+    font-size: var(--font-body);
+    cursor: pointer;
+    justify-content: center;
+    font-weight: var(--font-semibold);
+    max-height: 46px;
+    transition: var(--transition-bg-color);
+}
+.btn_primary img {
+    width: 12px;
+}
+.btn_primary:hover {
+    background-color: var(--color-btn-primary-hover);
+    color: var(--color-btn-primary-txt-hover);
+}
+.btn_primary:active {
+    background-color: var(--color-btn-primary-active);
+    color: var(--color-btn-primary-txt-active);
+}
+.btn_disabled {
+    pointer-events: none;
+    background-color: var(--color-btn-primary-disabled);
+    color: var(--color-btn-primary-txt-disabled);
+}
+/* * SECONDARY  -----------------------------> */
+.btn_secondary {
+    padding: 15px 0 15px 0;
+    background-color: var(--color-btn-secondary-default);
+    outline:1px solid var(--color-btn-secondary-outline);
+    border-radius: 25px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: var(--color-btn-secondary-txt);
+    font-size: var(--font-body);
+    cursor: pointer;
+    justify-content: center;
+    font-weight: var(--font-semibold);
+    transition: var(--transition-bg-color);
+}
+.btn_secondary img {
+    width: 20px;
+}
+.btn_secondary:hover {
+    background-color: var(--color-btn-primary-hover);
+    color: var(--color-btn-primary-txt-hover);
+}
+.btn_secondary:active {
+    background-color: var(--color-btn-primary-active);
+    color: var(--color-btn-primary-txt-active);
+}
+.btn_disabled {
+    pointer-events: none;
+    background-color: var(--color-btn-primary-disabled);
+    color: var(--color-btn-primary-txt-disabled);
+}
+/* ? INPUTS ---------------------------------------> */
+/* * INPUT IMG -----------------------------> */
+.input_cont {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input_cont img:first-child {
+    position: absolute;
+    left: 10px;
+    width: 22px;
+    height: 22px;
+}
+.input_cont img:last-child {
+    position: absolute;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+.input_primary_img {
+    border: none;
+    outline: var(--color-input-outline-default);
+    background-color: var(--color-input-default);
+    color: var(--color-input-txt-default);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    font-size: var(--font-body);
+    padding-left: 40px;
+    /* * Evita que el padding se desborde */
+    width: -webkit-fill-available;
+    width: -webkit-fill-available;
+    transition:var(--transition-bg-color);
+}
+.input_primary_img::placeholder {
+    color: var(--color-input-placeholder-default);
+}
+.input_primary_img:focus-visible {
+    outline:none;
+    box-shadow: var(--color-input-shadow-focus); 
+    border: var(--color-input-outline-focus); 
+}
+/* * INPUT DEFAULT -----------------------------> */
+/* INPUT PRIMARY */
+.input_primary {
+    border: none;
+    outline: var(--color-input-outline-default);
+    background-color: var(--color-input-default);
+    color: var(--color-input-txt-default);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    font-size: var(--font-body);
+    padding-inline: 20px;
+    /* * Evita que el padding se desborde */
+    width: -webkit-fill-available;
+    transition:background-color .2s ease-in-out;
+}
+.input_primary:focus-visible {
+    outline:none;
+    box-shadow: var(--color-input-shadow-focus); 
+    border:var(--color-input-outline-focus); 
+}
+/* ! INPUT ERROR ----------------------------->  */
+.input_error {
+    outline: var(--color-input-outline-error);
+}
+.input_error:focus-visible {
+    border:none;
+    box-shadow: var(--color-input-shadow-focus); 
+    outline: var(--color-input-outline-error);
+}
+.input_error_msn {
+    position: absolute;
+    bottom: -20px;
+    color: var(--color-danger);
+}

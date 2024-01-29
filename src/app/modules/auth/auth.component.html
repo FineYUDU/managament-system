@@ -1,0 +1,48 @@
+<!-- ? MAIN  -->
+<div class="main_cont">
+    <!-- ? BLOCK 1 | IMG AUTH -->
+    <div class="block_ img_cont">
+        <img [src]="'../../../../assets/theme/' + localService.GetMode() + '/logos/logo-avatar.svg'" 
+        class="logo_md">
+    </div>
+
+    <!-- ? BLOCK 2 | MAIN LOGO & ROUTER OUTLET -->
+    <div class="block_">
+        <!-- ? BLOCK CONTAINER -->
+        <div class="block_cont">
+            <!-- ? HEADER BLOCK 2 -->
+            <header>
+                <!-- IMG LOGO -->
+                <div class="logo_img">
+                    <img [src]="'../../../../assets/theme/' + localService.GetMode() + '/logos/logo-avatar.svg'" 
+                        class="logo_md">
+                </div>
+                <!-- <div class="img_test_"></div> -->
+
+                <!--  ? CHANGE LANG & MODE -->
+                <div class="lang_mode">
+                    <!--  CHANGE LANG -->
+                    <change-lang/>
+    
+                    <!--  CHANGE MODE -->
+                    <change-mode/>
+                </div>
+
+    
+            </header>
+    
+            <!-- * ROUTER OUTLET -->
+            <main>
+                <router-outlet/>
+            </main>
+    
+            <!-- * FOOTER MAIN -->
+            <footer>
+                <version/>
+            </footer>
+
+        </div>
+
+    </div>
+
+</div>

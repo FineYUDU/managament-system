@@ -1,0 +1,22 @@
+<p>profile works!</p>
+<div class="main_cont">
+    <p>Profile pic</p>
+    <!-- ? PROFILE IMG CONTAINER -->
+    <div class="profile_img_cont">
+        <!-- PROFILE IMG -->
+        <img [src]="url" height="70">
+
+    </div>
+
+    <br>
+    <!-- BUTTON FILE -->
+    <div class="btn_file_cont">
+        <!-- TODO:PUT AN ICON IMG -->
+        <img [src]="'../../../../assets/theme/' + localService.GetMode() + '/icons/icon-upload-img.svg'">
+        Adjuntar archivo
+        <input type="file" 
+        id="btn-file"
+        class="default-file-input"
+        (change)="onSelectFile($event)" >
+    </div>
+</div>

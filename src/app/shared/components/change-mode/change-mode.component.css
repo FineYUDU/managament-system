@@ -1,0 +1,43 @@
+/* ? TOGGLE CONTAINER */
+.toggle_cont {
+    width: 64px;
+    height: 35px;
+    background-color: var(--color-toggle);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+/* ? BUTTON MODE */
+.change_mode {
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-toggle-circle);
+    position: absolute;
+    left: var(--left);
+    transition: left .3s ease-in-out;
+    overflow: hidden;
+}
+.toggle_cont img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+.icon_sun {
+    left: 3px;
+    transition: opacity .5s ease-in-out;
+}
+.icon_moon {
+    left: 32px;
+    transition: opacity .5s ease-in-out;
+}
+.toggle_cont input {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

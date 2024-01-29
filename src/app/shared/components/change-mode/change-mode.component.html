@@ -1,0 +1,15 @@
+<!-- ? TOGGLE CONTAINER  -->
+<div class="toggle_cont">
+  <!-- ? BUTTON MODE -->
+  <div class="change_mode"></div>
+
+  <!-- ICON LIGHT ODE -->
+  <img [src]="'../../../../assets/theme/' + localService.GetMode() + '/icons/icon-sun.svg'" class="icon_sun">
+  
+  <!-- ICON DARK MODE -->
+  <img [src]="'../../../../assets/theme/' + localService.GetMode() + '/icons/icon-moon.svg'" class="icon_moon">
+  
+  <!-- INPUT -->
+  <input type="checkbox" (click)="themeService.changeMode()">
+
+</div>

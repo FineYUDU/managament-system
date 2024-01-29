@@ -1,0 +1,49 @@
+/* ? TOGGLE CONTAINER */
+.toggle_cont {
+    width: 64px;
+    height: 35px;
+    background-color: var(--color-toggle);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+/* BUTTON LANG */
+.change_lang {
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-toggle-circle);
+    position: absolute;
+    transition: left .3s ease-in-out;
+    left: 3px;
+}
+.color_lang_txt {
+    color: var(--color-toggle-txt);
+}
+.select {
+    color: var(--color-toggle-noselect);
+}
+.right {
+    left: 31px;
+}
+.toggle_cont span {
+    position: absolute; 
+}
+.es {
+    left: 10px;
+    transition: opacity .5s ease-in-out;
+}
+.en {
+    left: 38px;
+    transition: opacity .5s ease-in-out;
+}
+.toggle_cont input {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

@@ -1,0 +1,49 @@
+.main_cont {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-5);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-5);
+}
+/* ? FIELD | USER NAME | PASSWORD*/
+.field_ {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+    position: relative;
+}
+.error-msn {
+    position: absolute;
+    bottom: -20px;
+    color: var(--color-danger);
+}
+.none {
+    display: none;
+}
+/* ? HR CONTAINER */
+.hr_cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hr {
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-primary);
+}
+.hr_cont p {
+    padding-inline: 15px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+.btn_cont {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+}

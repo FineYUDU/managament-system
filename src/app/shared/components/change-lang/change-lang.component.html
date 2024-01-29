@@ -1,0 +1,22 @@
+<!-- ? TOGGLE CONTAINER  -->
+<div class="toggle_cont">
+    <!-- ? BUTTON MODE -->
+    <div class="change_lang"
+      [ngClass]="{'right': translateService.GetLang() === 'en'}">
+    </div>
+  
+    <!-- ES -->
+    <span class="es font_body font_bold color_lang_txt"
+      [ngClass]="{'select': translateService.GetLang() === 'en' }">
+      ES
+    </span>
+    <!-- EN -->
+    <span class="en font_body font_bold color_lang_txt"
+      [ngClass]="{'select': translateService.GetLang() === 'es' }">
+      EN
+    </span>
+    
+    <!-- INPUT -->
+    <input type="checkbox" (click)="translateService.changeLang()" >
+  
+  </div>

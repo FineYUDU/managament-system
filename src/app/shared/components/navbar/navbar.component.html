@@ -1,0 +1,32 @@
+<!-- ? MAIN CONTAINER -->
+<div class="main_cont">
+    <!-- ? START CONTAINER -->
+    <div class="start_cont">
+        <!-- IMG LOGO -->
+        <a  routerLink="./" class="logo_img">
+            <img [src]="'../../../../assets/theme/' + localService.GetMode() + '/logos/logo-avatar.svg'" 
+                class="logo_md">
+        </a>
+    </div>
+    <!-- ? END CONTAINER -->
+    <div class="end_cont">
+        <!-- BTN CREATE TOURNAMET -->
+        <button class="btn_primary">{{'Create a Tournament' | translate:ts.GetLang()}}</button>
+        
+        <!-- TODO: GET PROFILE -->
+        <a class="profile_cont">
+            <div routerLink="./profile" class="profile"></div>
+            <!-- ? LABLE -->
+            <label class="label_checkbox font_body color_primary_txt font_medium" >
+                <!-- TXT -->
+                {{username}}
+                <!-- CHECKBOX -->
+                <input type="checkbox" [(ngModel)]="chevron">
+                <!-- ICON CHEVRON -->
+                <img [src]="'../../../../assets/theme/' + localService.GetMode() + '/icons/icon-chevron.svg'">
+
+            </label>
+        </a>
+
+    </div>
+</div>

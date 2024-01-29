@@ -1,0 +1,62 @@
+.main_cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-container);
+    padding: 20px;
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.1);
+}
+/* LOGO IMG */
+.logo_img {
+    background-color: var(--color-primary-brand);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:  55px;
+    height: 55px;
+    border-radius: 50%;
+}
+/* ? END CONTAINER */
+.end_cont {
+    display: flex;
+    gap: var(--spacing-5);
+    align-items: center;
+}
+.profile {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary-50);
+    cursor: pointer;
+}
+/* ! CHECKBOX VARIABLES */
+.label_checkbox:has(:checked) {
+    --rotate:90deg;
+}
+/* ? PROFILE CONTAINER */
+.profile_cont {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+/* ? LABEL */
+.profile_cont label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+/* CHECKBOX */
+.profile_cont label input {
+    position: absolute;
+    opacity: 0;
+}
+/* ICON CHEVRON */
+.profile_cont label img {
+    width: 11px;
+    height: 11px;
+    transform: rotate(var(--rotate));
+    transition: all .3s ease-in-out;
+}
+

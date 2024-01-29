@@ -1,0 +1,399 @@
+/*
+        Variables structure :
+            type                            : example --> color, size, font, spacing, radius; 
+            object?                         : example --> button, input, background, chart, sidebar, navbar, header (auth, dashboard) ..;
+            hierarchy?                      : example --> primary || secondary
+            property?                       : example --> txt, outline, border, fill, h1, h2, sm, md, lg, medium, regular ...; 
+            subclass?                       : example --> active, hover, focus, disabled ...; 
+
+            --(type)-(object)-(hierarchy)-(property)-(subclass);
+
+        Example:
+        basic:
+            --color-primary;
+            --(type)-(hierarchy);
+
+            --font-primary;
+            --(type)-(hierarchy);
+
+            --font-bh1;
+            --(type)-(property);
+
+        medium:
+            --color-btn-primary-txt;
+            --(type)-(object)-(hierarchy)-(property || subclass);
+
+        hard:
+            --color-btn-primary-fill;
+            --(type)-(object)-(hierarchy)-(property);
+
+            --color-btn-primary-txt-disabled;
+            --(type)-(object)-(hierarchy)-(property)-(subclass);
+ */
+ .light {
+    /* ? PRIMITIVES -------------------------------------------------------------------->*/ 
+    /* ? Colors --------------> */
+    /* * Grey */
+    --color-grey-0                                                              :#F9F9F9;
+    --color-grey-50                                                             :#F2F2F2;
+    --color-grey-100                                                            :#DDDDDD;
+    --color-grey-200                                                            :#C6C6C6;
+    --color-grey-300                                                            :#AFAFAF;
+    --color-grey-400                                                            :#7F7F7F;
+    --color-grey-500                                                            :#4F4F4F;
+    --color-grey-600                                                            :#212121;
+    --color-grey-700                                                            :#151515;
+    /* * Brand */
+    --color-brand-50                                                            :#9999CE;
+    --color-brand-100                                                           :#8383B2;
+    --color-brand-200                                                           :#6E6E99;
+    --color-brand-300                                                           :#5B5B7F;
+    --color-brand-400                                                           :#4A4766;
+    --color-brand-500                                                           :#37354C;
+    /* * Danger */
+    --color-danger                                                              :#E63946;
+    /* * Success */
+    --color-success                                                             :#2CA04C;
+    /* ? Sizes --------------> */
+    /* * Radius */
+    --radius-xs                                                                 :.25rem;
+    --radius-sm                                                                 :.5rem;
+    --radius-md                                                                 :1rem;
+    --radius-lg                                                                 :1.5rem;
+    --radius-xl                                                                 :2rem;
+    --radius-2xl                                                                :8rem;
+    --radius-3xl                                                                :22.5rem;
+    /* * Spacing */
+    --spacing-1                                                                 :.25rem;
+    --spacing-2                                                                 :.5rem;
+    --spacing-3                                                                 :.75rem;
+    --spacing-4                                                                 :1rem;
+    --spacing-5                                                                 :1.5rem;
+    --spacing-6                                                                 :2rem;
+    --spacing-7                                                                 :2.5rem;
+    --spacing-8                                                                 :3rem;
+    --spacing-9                                                                 :3.5rem;
+    --spacing-10                                                                :4rem;
+    --spacing-11                                                                :4.5rem;
+    --spacing-12                                                                :5rem;
+    --spacing-13                                                                :5.5rem;
+    --spacing-14                                                                :6rem;
+    --spacing-15                                                                :6.5rem;
+    /* * Icons */
+    --icon-xs                                                                   :.75rem;
+    --icon-sm                                                                   :.875rem;
+    --icon-md                                                                   :1rem;
+    --icon-lg                                                                   :1.25rem;
+    --icon-xl                                                                   :1.375rem;
+
+    /* ? TOKENS -------------------------------------------------------------------->*/ 
+    /* ? Colors --------------> */
+    /* * Primary */
+    --color-primary                                                             :var(--color-grey-600);
+    --color-primary-50                                                          :var(--color-grey-0);
+    --color-primary-100                                                         :var(--color-grey-400);
+    --color-primary-200                                                         :var(--color-grey-500);
+    --color-primary-300                                                         :var(--color-grey-700);
+    /* * Background */
+    --color-bg-primary                                                          :var(--color-grey-0);
+    --color-bg-secondary                                                        :var(--color-grey-50);
+    --color-bg-tertiary                                                         :var(--color-grey-100);
+    /* * Brand */
+    --color-brand                                                               :var(--color-brand-300);
+    --color-brand-soft                                                          :var(--color-brand-50);
+    --color-brand-high                                                          :var(--color-brand-500);
+    /* ? Size --------------> */
+    /* * Spacing */
+    --spacing-2xs                                                               :var(--spacing-1);
+    --spacing-xs                                                                :var(--spacing-2);
+    --spacing-sm                                                                :var(--spacing-4);
+    --spacing-md                                                                :var(--spacing-6);
+    --spacing-lg                                                                :var(--spacing-8);
+    --spacing-xl                                                                :var(--spacing-10);
+    --spacing-2xl                                                               :var(--spacing-15);
+    --gap-dashboard                                                             :var(--spacing-6);
+    /* * Radius */
+    --radius-minimal                                                            :var(--radius-xs);
+    --radius-rounded                                                            :var(--radius-md);
+    --radius-full                                                               :var(--radius-3xl);
+
+    /* ? FONTS -------------------------------------------------------------------->*/ 
+    /* * Font Family */
+    --primary-font                                                              :'Raleway', sans-serif;
+    /* * Headlines */
+    --font-h1                                                                   :4em;
+    --font-h2                                                                   :3.75em;
+    --font-h3                                                                   :3em;
+    --font-h4                                                                   :2.125em;
+    --font-h5                                                                   :1.5em;
+    --font-h6                                                                   :1.3125em;
+    /* * Body */
+    --font-b1                                                                   :1em;
+    --font-b2                                                                   :.875em;
+    /* * Captions */
+    --font-c1                                                                   :.75em;
+    --font-c2                                                                   :.625em;
+    --font-c3                                                                   :.5em;
+    /* * Weight | Font  */
+    --font-medium                                                               :500;
+    --font-semibold                                                             :600;
+    --font-bold                                                                 :700;
+
+    /* ? Helpers -------------------------------------------------------------------->*/ 
+    /* ? Size --------------> */
+    /* * Spacing */
+    --dashboard-width                                                           :82.45%;
+    /* ? Transitios --------------> */
+    --transition-bg-color                                                       :background-color .2s ease-in-out;
+
+ }
+ 
+ :root {
+  /* ? COLORS -------------------------------------------------------------------->*/ 
+    /* * Main Colors */
+    --color-primary                                                         : #212529;
+    --color-primary-0                                                       : #dee2e6;
+    --color-primary-50                                                      : #ced4da;
+    --color-primary-100                                                     : #adb5bd;
+    --color-primary-200                                                     : #6c757d;
+    --color-primary-300                                                     : #495057;
+    --color-primary-400                                                     : #343a40;
+    /* * Txt Colors */
+    --color-primary-txt                                                     : #212529;
+    /* Link */
+    --color-link                                                            : #008eaa;
+    /* * Color | Containers */
+    --color-bg                                                              : #f5f5f5;
+    --color-container                                                       : #fdfdfd; 
+    /* PRIMARY */
+    --color-btn-primary-txt                                                 : #fdfdfd; 
+    --color-btn-primary-default                                             : #184e77;
+    --color-btn-primary-txt-hover                                           : #fdfdfd;
+    --color-btn-primary-hover                                               : #1e6091;
+    --color-btn-primary-txt-active                                          : #168aad;
+    --color-btn-primary-active                                              : #184e77;
+    --color-btn-primary-disabled                                            : #168aad;
+    --color-btn-primary-txt-disabled                                        : #f6f6ff;
+    /* COLOR TOGGLE */
+    --color-toggle                                                          : #ced4da;
+    --color-toggle-txt                                                      : #ced4da;
+    --color-toggle-noselect                                                 : #184e77;
+    --color-toggle-circle                                                   : #184e77;
+    /* SECONDARY */
+    --color-btn-secondary-txt                                               : #4a4766; 
+    --color-btn-secondary-default                                           : transparent;
+    --color-btn-secondary-outline                                           : #4a4766;
+    --color-btn-secondary-txt-hover                                         : #94879f;
+    --color-btn-secondary-hover                                             : #3d3a53;
+    --color-btn-secondary-active                                            : #2b293b;
+    --color-btn-secondary-txt-active                                        : #94879f;
+    --color-btn-secondary-disabled                                          : #94879f;
+    --color-btn-secondary-txt-disabled                                      : #f6f6ff;
+    /* * Color | Inputs */
+    /* DEFAULT */
+    --color-input-default                                                   : #fdfdfd;
+    --color-input-outline-default                                           : 1px solid #212529;
+    --color-input-placeholder-default                                       : #a6a6a6;
+    --color-input-txt-default                                               : #212121;
+    /* FOCUS VISIBLE */
+    --color-input-shadow-focus                                              : 0 0 5px rgba(0, 0, 0, 0.3);
+    --color-input-outline-focus                                             : 1px solid  #008eaa;
+    --color-input-placeholder-focus                                         : #e5e5e5;
+    /* ERROR */
+    --color-input-outline-error                                             : 1px solid  #E50F0F;
+    /* DISABLED */
+    --color-input-disabled                                                  : #F5F5F5;
+    --color-input-outline-disabled                                          : #E5E5E5;
+    --color-input-placeholder-disabled                                      : #C1C1C1;
+    --color-input-txt-disabled                                              : #212121;
+    /* * Color | Brand */
+    /* Primary */
+    --color-primary-brand                                                   : #184e77;
+    --color-primary-brand-soft                                              : #0a9396;
+    --color-primary-brand-high                                              : #005f73;
+    /* Secondary */
+    --color-secondary-brand                                                 : #E63946;
+    --color-secondary-brand-soft                                            : #FF4057;
+    --color-secondary-brand-high                                            : #721D27;
+    /* Msn  */
+    --color-danger                                                          : #E63946;
+    --color-success                                                         : #2CA04C;
+    /*? FONTS -------------------------------------------------------------------->*/
+    /* * Font Family */
+    --primary-font                                                      :'Raleway', sans-serif;
+    /* * Font Size */
+    /* * Size | Font */
+    --font-h1                                                             : 48px;
+    --font-h1-5                                                           : 32px;
+    --font-h2                                                             : 24px;
+    --font-h3                                                             : 18px;
+    --font-h4                                                             : 16px;
+    --font-body                                                           : 14px;
+    --font-label                                                          : 12px;  
+    /* * Weight | Font  */
+    --font-light                                                          : 300;
+    --font-regular                                                        : 400;
+    --font-medium                                                         : 500;
+    --font-semibold                                                       : 600;
+    --font-bold                                                           : 700;
+    --font-extrabold                                                      : 800;
+    /* TODO: Size | Icons */
+    --size-icon-xs                                                        : 6px;
+    --size-icon-sm                                                        : 15px;
+    --size-icon-md                                                        : 16px;
+    --size-icon-lg                                                        : 17px;
+    /*? SPACING --------------------------------------------------------------------> */
+    --gap-dashboard                                                       : 24px;
+    /*? SPACING --------------------------------------------------------------------> */
+    --spacing-1                                                           : 4px;
+    --spacing-2                                                           : 8px;
+    --spacing-3                                                           : 12px;
+    --spacing-4                                                           : 16px;
+    --spacing-5                                                           : 24px;
+    --spacing-6                                                           : 32px;
+    --spacing-7                                                           : 40px;
+    --spacing-8                                                           : 48px;
+    --spacing-9                                                           : 56px;
+    --spacing-10                                                          : 64px;
+    --spacing-11                                                          : 72px;
+    --spacing-12                                                          : 80px;
+    --spacing-13                                                          : 96px;
+    --spacing-14                                                          : 104px;
+    --spacing-15                                                          : 120px;
+    --spacing-16                                                          : 160px;
+    /*? RESPONSIVE ------------------------------------------------------------------> */
+    /* * Size | Containers */
+    --dashboard-width                                                       : 82.45%;
+
+    /* ? CHANGE MODE -------------------------------------------------------------> */
+    --left                                                                  : 3px;
+    --opacity-sun                                                           : 1;
+    --opacity-moon                                                          : 0;
+    /* ? TRANSITIONS & ANIMATIONS --------------------------------------------------> */
+    --transition-bg-color                                                   : background-color .2s ease-in-out;
+}
+.dark-mode {
+     /* ? COLORS -------------------------------------------------------------------->*/ 
+    /* * Main Colors */
+    /* PRIMARY */
+    --color-primary                                                         : #fdfdfd;
+    --color-primary-0                                                       : #d2d2ff;
+    --color-primary-50                                                      : #3c3c3f;
+    --color-primary-100                                                     : #606066;
+    --color-primary-200                                                     : #9a9aa5;
+    --color-primary-300                                                     : #c7c7d8;
+    --color-primary-400                                                     : #e4e4f9;
+    /* *  Txt Colors */
+    --color-primary-txt                                                     : #fdfdfd;
+    /*  Link */
+    --color-link                                                            : #008eaa;
+    /* * Color | Containers */
+    --color-bg                                                              : #212529;
+    --color-container                                                       : #272787; 
+    /* * Color | buttons */
+    /* PRIMARY */
+    --color-btn-primary-txt                                                 : #212529; 
+    --color-btn-primary-default                                             : #c7c7d8;
+    --color-btn-primary-txt-hover                                           : #9a9aa5;
+    --color-btn-primary-hover                                               : #606066;
+    --color-btn-primary-txt-active                                          : #606066;
+    --color-btn-primary-active                                              : #3c3c3f;
+    --color-btn-primary-disabled                                            : #c7c7d8;
+    --color-btn-primary-txt-disabled                                        : #e4e4f9;
+    /* COLOR TOGGLE */
+    --color-toggle                                                          : #3c3c3f;
+    --color-toggle-txt                                                      : #3c3c3f;
+    --color-toggle-noselect                                                 : #c7c7d8;
+    --color-toggle-circle                                                   : #c7c7d8;
+    /* SECONDARY */
+    --color-btn-secondary-txt                                               : #c7c7d8;
+    --color-btn-secondary-default                                           : transparent;
+    --color-btn-secondary-outline                                           : #c7c7d8;
+    --color-btn-secondary-txt-hover                                         : #e9e9e9;
+    --color-btn-secondary-hover                                             : #e9e9e9;
+    --color-btn-secondary-active                                            : #e9e9e9;
+    --color-btn-secondary-txt-active                                        : #e9e9e9;
+    --color-btn-secondary-disabled                                          : #e9e9e9;
+    --color-btn-secondary-txt-disabled                                      : #e9e9e9;
+        /* * Color | Inputs */
+    /* DEFAULT */
+    --color-input-default                                                   : #212529;
+    --color-input-outline-default                                           : 1px solid #a6a6a6;
+    --color-input-placeholder-default                                       : #a6a6a6;
+    --color-input-txt-default                                               : #fdfdfd;
+    /* FOCUS VISIBLE */
+    --color-input-shadow-focus                                              : 0 0 5px rgba(0, 0, 0, 0.3);
+    --color-input-outline-focus                                             : 1px solid  #008eaa;
+    --color-input-placeholder-focus                                         : #e5e5e5;
+    /* ERROR */
+    --color-input-outline-error                                             : 1px solid  #E50F0F;
+    /* DISABLED */
+    --color-input-disabled                                                  : #F5F5F5;
+    --color-input-outline-disabled                                          : #E5E5E5;
+    --color-input-placeholder-disabled                                      : #C1C1C1;
+    --color-input-txt-disabled                                              : #212121;
+    /* * Color | Brand */
+    /* Primary */
+    --color-primary-brand                                                   : #005f73;
+    --color-primary-brand-soft                                              : #0a9396;
+    --color-primary-brand-high                                              : #001219;
+    /* Secondary */
+    --color-secondary-brand                                                 : #E63946;
+    --color-secondary-brand-soft                                            : #FF4057;
+    --color-secondary-brand-high                                            : #721D27;
+    /* Msn  */
+    --color-danger                                                          : #E63946;
+    --color-success                                                         : #2CA04C;
+    /*? FONTS -------------------------------------------------------------------->*/
+    /* * Font Family */
+    --primary-font                                                      :'Raleway', sans-serif;
+    /* * Font Size */
+    /* * Size | Font */
+    --font-h1                                                             : 48px;
+    --font-h1-5                                                           : 32px;
+    --font-h2                                                             : 24px;
+    --font-h3                                                             : 18px;
+    --font-h4                                                             : 16px;
+    --font-body                                                           : 14px;
+    --font-label                                                          : 12px;  
+    /* * Weight | Font  */
+    --font-light                                                          : 300;
+    --font-regular                                                        : 400;
+    --font-medium                                                         : 500;
+    --font-semibold                                                       : 600;
+    --font-bold                                                           : 700;
+    --font-extrabold                                                      : 800;
+    /* TODO: Size | Icons */
+    --size-icon-xs                                                        : 6px;
+    --size-icon-sm                                                        : 15px;
+    --size-icon-md                                                        : 16px;
+    --size-icon-lg                                                        : 17px;
+    /*? SPACING --------------------------------------------------------------------> */
+    --gap-dashboard                                                       : 24px;
+    /*? SPACING --------------------------------------------------------------------> */
+    --spacing-1                                                           : 4px;
+    --spacing-2                                                           : 8px;
+    --spacing-3                                                           : 12px;
+    --spacing-4                                                           : 16px;
+    --spacing-5                                                           : 24px;
+    --spacing-6                                                           : 32px;
+    --spacing-7                                                           : 40px;
+    --spacing-8                                                           : 48px;
+    --spacing-9                                                           : 56px;
+    --spacing-10                                                          : 64px;
+    --spacing-11                                                          : 72px;
+    --spacing-12                                                          : 80px;
+    --spacing-13                                                          : 96px;
+    --spacing-14                                                          : 104px;
+    --spacing-15                                                          : 120px;
+    --spacing-16                                                          : 160px;
+    /*? RESPONSIVE ------------------------------------------------------------------> */
+    /* * Size | Containers */
+    --dashboard-width                                                       : 82.45%;
+    /* ? CHANGE MODE -------------------------------------------------------------> */
+    --left                                                                  : 31px;
+    --opacity-sun                                                           : 0;
+    --opacity-moon                                                          : 1;
+    /* ? TRANSITIONS & ANIMATIONS --------------------------------------------------> */
+    --transition-bg-color                                                   : background-color .2s ease-in-out;
+}
