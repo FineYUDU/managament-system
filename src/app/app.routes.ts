@@ -11,17 +11,20 @@ export const routes: Routes = [
             {
                 path:'login',
                 title:'Login',
-                // loadComponent: ()=> import('./modules/auth/pages/login/login.component')
+                data:{translate:'menu-auth.login'},
+                loadComponent: ()=> import('./modules/auth/pages/login/login.component'),
             },
             {
                 path:'forgot-password',
                 title:'Forgot Password',
-                // loadComponent: ()=> import('./modules/auth/pages/forgot-password/forgot-password.component')
+                data:{translate:'menu-auth.forgot-password'},
+                loadComponent: ()=> import('./modules/auth/pages/forgot-password/forgot-password.component'),
             },
             {
                 path:'create-account',
                 title:'Create Account',
-                // loadComponent: ()=> import('./modules/auth/pages/create-account/create-account.component')
+                data:{translate:'menu-auth.create-account'},
+                loadComponent: ()=> import('./modules/auth/pages/create-account/create-account.component')
             },
             {   path:'', redirectTo:'login',pathMatch:'full'},
         ]
@@ -33,7 +36,7 @@ export const routes: Routes = [
             {
                 path:'main',
                 title:'Main',
-                // loadComponent: ()=> import('./modules/dashboard/pages/main/main.component')
+                loadComponent: ()=> import('./modules/dashboard/pages/main/main.component')
             },
             {   path:'', redirectTo:'main',pathMatch:'full'},
         ]

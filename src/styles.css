@@ -4,6 +4,7 @@
     padding: 0;
     font-family: var(--primary-font);
     font-weight: var(--font-medium);
+    font-size: var(--font-b1);
     color: var(--color-primary);
 }
 a {
@@ -12,8 +13,25 @@ a {
 button {
     border: none;
 }
+input {
+    font-size: var(--font-b1);
+    color: var(--color-primary);
+    font-weight: var(--font-regular);
+    border: none;
+}
+input:focus {
+    color: var(--color-primary);
+    font-weight: var(--font-regular);
+}
+input::placeholder {
+    color: var(--color-primary-100);
+    font-weight: var(--font-regular);
+}
+::marker {
+    color: transparent;
+}
 /* ? FONTS -------------------------------------------------> */
-/* ? Weight -----------> */
+/* ? Weigh -----------> */
 .font_regular {
     font-weight: var(--font-regular);
 }
@@ -26,7 +44,7 @@ button {
 .font_semibold {
     font-weight: var(--font-semibold);
 }
-/* ? Colors --------------> */
+/* ? Color --------------> */
 /* * Primary */
 .color_primary {
     color: var(--color-primary);
@@ -52,4 +70,64 @@ button {
 }
 .color_brand_high {
     color: var(--color-brand-high);
+}
+/* ? Size --------------> */
+/* * Headlines */
+.font_h1 {
+    font-size: var(--font-h1);
+}
+.font_h2 {
+    font-size: var(--font-h2);
+}
+.font_h3 {
+    font-size: var(--font-h3);
+}
+.font_h4 {
+    font-size: var(--font-h4);
+}
+.font_h5 {
+    font-size: var(--font-h5);
+}
+.font_h6 {
+    font-size: var(--font-h6);
+}
+/* * Body */
+.font_b1 {
+    font-size: var(--font-b1);
+}
+.font_b2 {
+    font-size: var(--font-b2);
+}
+/* * Captions */
+.font_c1 {
+    font-size: var(--font-c1);
+}
+.font_c2 {
+    font-size: var(--font-c2);
+}
+.font_c3 {
+    font-size: var(--font-c3);
+}
+/* ? BUTTONS -------------------------------------------------> */
+/* * Button primary */
+/* .btn_primary {
+} */
+/* ? INPUTS -------------------------------------------------> */
+/* * Input */
+.input_cont {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.input_cont input {
+    background-color: var(--color-primary-50);
+    border:.0625rem solid var(--color-primary-100);
+    border-radius: var(--radius-minimal);
+    padding: var(--spacing-xs) var(--spacing-sm);
+}
+.input_cont img:first-child {
+    position: absolute;
+    left: var(--spacing-2);
+    width: var(--icon-sm);
+    height: var(--icon-sm);
 }

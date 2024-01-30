@@ -1,0 +1,8 @@
+/* ? MAIN CONTAINER */
+.main-cont {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-7);
+    align-items: flex-start;
+    min-width: 25rem;
+}
