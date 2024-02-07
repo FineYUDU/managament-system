@@ -5,14 +5,16 @@
     
         <!-- ? FIELD | USENAME -->
         <input-field 
-            legend=" {{ 'auth.login.username' | translate:ts.GetLang }} " 
+            legend="{{ 'auth.login.username' | translate:ts.GetLang }}" 
+            placeholder="{{ 'auth.login.username' | translate:ts.GetLang }}" 
             mainIconSrc="icon-user"
             inputType="text">
         </input-field>
     
         <!-- ? FIELD | PASSWORD -->
         <input-field 
-            legend="password" 
+            legend="{{ 'auth.login.password' | translate:ts.GetLang }}" 
+            placeholder="{{ 'auth.login.password' | translate:ts.GetLang }}" 
             inputType="password"
             mainIconSrc="icon-password"
             [iconEye]="true">
@@ -50,16 +52,16 @@
         <div class="txt-footer">
             <p class="font_c1 font_medium color_primary">
                 {{ 'auth.login.dont-have' | translate:ts.GetLang }}
-                <a class="color_link" routerLink="./create-account" > 
+                <a class="color_link" routerLink="/auth/create-account"> 
                     {{ 'auth.login.create' | translate:ts.GetLang }} 
                 </a> 
             </p>
             
         </div>
         <div class="txt-footer">
-            <p class="font_c1 font_medium color_link">
+            <a class="font_c1 font_medium color_link" routerLink="/auth/forgot-password">
                 {{ 'auth.login.forgot' | translate:ts.GetLang }}
-            </p>
+            </a>
 
         </div>
     

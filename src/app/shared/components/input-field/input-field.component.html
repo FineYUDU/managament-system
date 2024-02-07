@@ -7,7 +7,7 @@
         <div class="header_">
             <!-- LEGEND -->
             @if( legend ) {
-                <legend class="font_b2 font_medium color_primary"> 
+                <legend class="font_c1 font_regular color_primary"> 
                     {{  legend  }} 
                 </legend>
             }
@@ -18,10 +18,10 @@
                     <img [src]="'../../../../assets/theme/'+localService.GetMode+'/icons/icon-type-'+inputType+'.svg'">
                     <!-- TXT -->
                     @if(inputType === 'text') {
-                        <p class="font_b2 color_primary_100 font_regular"> {{ 'Hide' }} </p>
+                        <p class="font_b2 color_primary_100 font_regular"> {{ 'button.hide' | translate:ts.GetLang }} </p>
                     }
                     @else if(inputType === 'password') {
-                        <p class="font_b2 color_primary_100 font_regular"> {{ 'Show' }} </p>
+                        <p class="font_b2 color_primary_100 font_regular"> {{ 'button.show' | translate:ts.GetLang }} </p>
                     }
                 </div>
             }
@@ -31,7 +31,7 @@
             <input [type]="inputType" 
                     (change)="changeText($event)"
                     maxlength="50"
-                    placeholder="user"
+                    [placeholder]="placeholder"
                     [disabled]="isDisabled"
                     [value]="fieldValue"
                     class="primary_input"

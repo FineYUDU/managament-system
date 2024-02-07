@@ -5,13 +5,16 @@ import { NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 // * Services
 import { FormService } from '@core/services/forms.service';
 import { LocalStorageService } from '@core/services/localstorage.service';
+import { TranslateService } from '@core/services/translate.service';
+import { TranslatePipe } from '@shared/pipes/translate.pipe';
 
 @Component({
   selector: 'input-field',
   standalone: true,
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslatePipe,
   ],
   templateUrl: './input-field.component.html',
   styleUrl: './input-field.component.css',
@@ -40,12 +43,15 @@ export class InputFieldComponent {
   @Input() iconTxt:string = '';
   // * Icon Main
   @Input() mainIconSrc:string = '';
+  // * Placeholder
+  @Input() placeholder:string = '';
   onTouchCb?: () => void;
   // * Field Value
   fieldValue:any = '';
   private onChangeCb?: Function;
   public formService = inject( FormService );
   public localService = inject( LocalStorageService );
+  public ts = inject( TranslateService );
 
   // * Change Input Type | password
   changeTypePassword():string {

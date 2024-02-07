@@ -44,7 +44,7 @@ input::placeholder {
 /* INPUT */
 .input_ {
     position: relative;
-    min-width: 316px;
+    min-width: 21rem;
 }
 .icon_main {
     position: absolute;
@@ -75,6 +75,7 @@ input::placeholder {
 /* PLACEHOLDER */
 .primary_input::placeholder {
     color: var(--color-primary-100);
+    font-weight: var(--font-regular);
 }
 /* HOVER */
 .primary_input:hover {

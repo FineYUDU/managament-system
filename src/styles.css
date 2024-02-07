@@ -141,49 +141,60 @@ input::placeholder {
 }
 /* * BTN STYLES */
 /* ? BUTTON PRIMARY */
-/* Default */
+/* * Default */
 .btn_primary {
     color: var(--color-primary-50);
-    outline: .0625rem solid var(--color-primary) ;
+    outline: .0625rem solid transparent;
     background-color: var(--color-primary);
 }
-/* Hover */
+/* * Hover */
 .btn_primary:hover {
     color: var(--color-primary-50);
-    outline: .0625rem solid var(--color-primary-200) ;
+    outline: .0625rem solid transparent;
     background-color: var(--color-primary-200);
 }
-/* Active */
+/* * Active */
 .btn_primary:active {
     color: var(--color-primary-100);
-    outline: .0625rem solid var(--color-primary-300) ;
+    outline: .0625rem solid transparent;
     background-color: var(--color-primary-300);
 }
 
 /* ? BUTTON DISCORD */
-/* Default */
+/* * Default */
 .btn_discord {
     color: var(--color-primary-50);
-    outline: .0625rem solid #6370f9;
+    outline: .0625rem solid transparent;
     background-color: #5865F2;
 }
-/* Hover */
+/* * Hover */
 .btn_discord:hover {
     color: var(--color-primary-50);
-    outline: .0625rem solid #6672f5;
+    outline: .0625rem solid transparent;
     background-color: #6672f5;
 }
-/* Active */
+/* * Active */
 .btn_discord:active {
     opacity: 2;
     color: var(--color-primary-50);
-    outline: .0625rem solid #4655f3;
+    outline: .0625rem solid transparent;
     background-color: #5865F2;
 }
-
 /* ? BUTTON SECONDARY */
 .btn_secondary {
     color: var(--color-primary);
     outline: .0625rem solid var(--color-primary-200);
     background-color: var(--color-primary-50);
+}
+/* * Hover */
+.btn_secondary:hover {
+    color: var(--color-primary-50);
+    outline: .0625rem solid transparent;
+    background-color: var(--color-primary-100);
+}
+/* * Active */
+.btn_secondary:active {
+    color: var(--color-primary-100);
+    outline: .0625rem solid transparent;
+    background-color: var(--color-primary-200);
 }

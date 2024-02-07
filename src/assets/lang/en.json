@@ -13,7 +13,9 @@
         "send":"Send",
         "join":"Join",
         "google":"Join with Google",
-        "discord":"Join with Discord"
+        "discord":"Join with Discord",
+        "show":"Show",
+        "hide":"Hide"
     },
     "menu-auth":{
         "login":"Welcome back",

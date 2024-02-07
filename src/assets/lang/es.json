@@ -13,7 +13,9 @@
         "send":"Enviar",
         "join":"Unirse",
         "google":"Unirse con Google",
-        "discord":"Unirse con Discord"
+        "discord":"Unirse con Discord",
+        "show":"Mostrar",
+        "hide":"Ocultar"
     },
     "menu-auth":{
         "login":"Bienvenido",
