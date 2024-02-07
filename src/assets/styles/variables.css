@@ -18,6 +18,11 @@
     --brand-300                                                                 :#5B5B7F;
     --brand-400                                                                 :#4A4766;
     --brand-500                                                                 :#37354C;
+    /* * Blue */
+    --blue-50                                                                   :#53B1FD;
+    --blue-100                                                                  :#2E90FA;
+    --blue-200                                                                  :#1570EF;
+    --blue-300                                                                  :#175CD3;
     /* * Danger */
     --danger                                                                    :#E63946;
     /* * Success */
@@ -59,8 +64,8 @@
     /* * Primary */
     --color-primary                                                             :var(--grey-600);
     --color-primary-50                                                          :var(--grey-0);
-    --color-primary-100                                                         :var(--grey-400);
-    --color-primary-200                                                         :var(--grey-500);
+    --color-primary-100                                                         :var(--grey-300);
+    --color-primary-200                                                         :var(--grey-400);
     --color-primary-300                                                         :var(--grey-700);
     /* * Background */
     --color-bg-primary                                                          :var(--grey-0);

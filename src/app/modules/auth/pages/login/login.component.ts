@@ -1,4 +1,5 @@
 // * Angular
+import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
@@ -8,7 +9,8 @@ import { LocalStorageService } from '@core/services/localstorage.service';
 import { TranslateService } from '../../../../core/services/translate.service';
 // * Pipes
 import { TranslatePipe } from '@shared/pipes/translate.pipe';
-import { CommonModule } from '@angular/common';
+// * Components
+import { InputFieldComponent } from '@shared/components/input-field/input-field.component';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +20,7 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     ReactiveFormsModule,
     RouterModule,
+    InputFieldComponent,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'

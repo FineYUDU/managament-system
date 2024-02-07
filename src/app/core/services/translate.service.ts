@@ -1,12 +1,12 @@
 // * Angular
-import { ApplicationRef, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable({providedIn: 'root'})
 
 export class TranslateService {
     lang:string;
     
-    constructor( private appRef: ApplicationRef ) { 
+    constructor( ) { 
         // * Initialize lang from localStorage or use 'es' as the default
         this.lang =  localStorage.getItem('lang') || 'es';    
         
@@ -17,8 +17,9 @@ export class TranslateService {
             localStorage.setItem('lang','es');
         }
     }
+    
     // * Get Lang
-    GetLang():string {
+    get GetLang():string {
         if(localStorage.getItem('lang') === 'es') {
           return 'es'
         } 

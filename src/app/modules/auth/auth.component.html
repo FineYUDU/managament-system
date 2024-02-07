@@ -1,21 +1,20 @@
 <!-- ? MAIN CONTAINER -->
 <main>
+    <!-- ? NAVBAR -->
+    <ul class="header font_b1">
+        <li>home</li>
+        <li>lang</li>
+    </ul>
     <!-- ? SECTION 1 | FORM -->
     <section>
-        <!-- ? HEADER -->
-        <div class="header">
+        <!-- ? LOGO CONTAINER -->
+        <div class="logo-cont">
             <!-- LOGO -->
-            <img src="../">
-
-            <!-- LANG -->
-            <lang/>
-
-            <!-- MODE -->
-            <mode/>
+            <img [src]="'../../../assets/theme/'+localService.GetMode+'/logos/logo-avatar.svg'">
 
         </div>
 
-        <!--  ROUTER OUTLET -->
+        <!--  ? ROUTER OUTLET -->
         <div class="router-outlet">
             <!--  BREADCRUMB -->
             <breadcrumb/>
@@ -32,11 +31,5 @@
         </div>
 
     </section>
-
-    <!-- ? SECTION 2 | IMG -->
-    <section>
-
-    </section>
-
     
 </main>

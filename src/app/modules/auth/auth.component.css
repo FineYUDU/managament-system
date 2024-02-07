@@ -1,25 +1,38 @@
 main {
-    background-color: var(--grey-50);
-    display: grid;
-    grid-template-columns: 50% 50%;
-    height: 100vh;
-}
-section:first-child {
-    padding-top: var(--spacing-xl);
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: var(--spacing-md);
-    background-color: var(--color-bg-primary);
-    margin: var(--spacing-md);
-    border-radius: var(--radius-minimal);
+    height: 100vh;
+    background-color: var(--grey-50);
 }
-/* ? HEADER */
+/* ? NAVBAR */
 .header {
     display: flex;
+    justify-content: space-between;
+    width: var(--dashboard-width);
+    padding: var(--spacing-sm) 0;
+}
+section {
+    padding: var(--spacing-xl);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color-bg-primary);
+    border-radius: var(--radius-rounded);
+    width: 30.9%;
+    height: 74.94%;
+}
+/* ? LOGO CONTAINER */
+.logo-cont {
+    display: flex;
+}
+.logo-cont img {
+    height: 3.75rem;
+    width: 3.75rem;
 }
 .router-outlet {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: var(--spacing-sm);
 }

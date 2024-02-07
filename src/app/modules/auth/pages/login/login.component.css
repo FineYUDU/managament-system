@@ -1,8 +1,35 @@
 /* ? MAIN CONTAINER */
-.main-cont {
+/* .main-cont {
+    min-width: 25rem;
+} */
+form {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-7);
-    align-items: flex-start;
-    min-width: 25rem;
+    gap: var(--spacing-sm);
+}
+/* ? OR */
+.or-cont {
+    display: flex;
+    align-items: center;
+}
+/* LINE */
+.line {
+    height: .0625rem;
+    width: 100%;
+    background-color: var(--color-primary-100);
+}
+.or-cont p {
+    padding-inline:var(--spacing-sm) ;
+}
+
+/* ? BUTTONS CONTAINER */
+.btn-cont {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+/* ? TEXT FOOTER */
+.txt-footer {
+    display: flex;
+    justify-content: center;
 }

@@ -2,12 +2,12 @@
     <!-- ? DEFER -->
     @defer { 
         <!-- TITLE -->
-        <p class="font_h5 font_medium color_primary" > {{ title | translate:ts.GetLang() }} </p>
+        <p class="font_h5 font_semibold color_primary"> {{ title | translate:ts.GetLang }} </p>
     }
     @placeholder(minimum 2000ms) {}    
 } 
 @else {
     <!-- TITLE -->
-    <p class="font_h5 font_medium color_primary" > {{ title | translate:ts.GetLang() }} </p>
+    <p class="font_h5 font_semibold color_primary"> {{ title | translate:ts.GetLang }} </p>
 }
 
