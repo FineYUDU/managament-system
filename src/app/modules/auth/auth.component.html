@@ -1,21 +1,35 @@
 <!-- ? MAIN CONTAINER -->
 <main>
+    <!-- ? NAVBAR -->
+    <ul class="navbar font_b1 font_medium color_primary">
+        <!-- ? LINK -->
+        <li>
+            <!-- TXT -->
+            <a class="navbar font_b1 font_medium color_primary">
+                Home
+            </a>
+
+        </li>
+        <!-- ? LINK -->
+        <li>
+            <!-- TXT -->
+            <a class="navbar font_b1 font_medium color_primary">
+                Lang
+            </a>
+
+        </li>
+
+    </ul>
     <!-- ? SECTION 1 | FORM -->
     <section>
-        <!-- ? HEADER -->
-        <div class="header">
+        <!-- ? LOGO CONTAINER -->
+        <div class="logo-cont">
             <!-- LOGO -->
-            <img src="../">
-
-            <!-- LANG -->
-            <lang/>
-
-            <!-- MODE -->
-            <mode/>
+            <img [src]="'../../../assets/theme/'+localService.GetMode+'/logos/logo-avatar.svg'">
 
         </div>
 
-        <!--  ROUTER OUTLET -->
+        <!--  ? ROUTER OUTLET -->
         <div class="router-outlet">
             <!--  BREADCRUMB -->
             <breadcrumb/>
@@ -32,11 +46,5 @@
         </div>
 
     </section>
-
-    <!-- ? SECTION 2 | IMG -->
-    <section>
-
-    </section>
-
     
 </main>

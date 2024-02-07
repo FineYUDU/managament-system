@@ -1,28 +1,68 @@
 <!-- ? MAIN CONTAINER -->
 <div class="main-cont">
-    <!-- ? HEADER CONTAINER -->
-    <div class="header">
-        <!-- ? HEADER -->
-        <p class="font_b1 font_regular color_fg_tertiary"> {{ 'auth.login.subtitle' | translate:ts.GetLang() }} </p>
-
-    </div>
-    
     <!-- ? FORM -->
     <form autocomplete="off">
+    
         <!-- ? FIELD | USENAME -->
-        <div class="field_">
-            <!-- LABEL -->
-            <label class="font_label font_medium color_fg_secondary"> {{ 'auth.login.email' | translate:ts.GetLang() }} </label>
-            <!-- ? INPUT CONTAINER -->
-            <div class="input_cont">
-                <img src="../">
-                <!-- INPUT -->
-                <input type="text" placeholder="placeholder...">
-
-            </div>
+        <input-field 
+            legend=" {{ 'auth.login.username' | translate:ts.GetLang }} " 
+            mainIconSrc="icon-user"
+            inputType="text">
+        </input-field>
+    
+        <!-- ? FIELD | PASSWORD -->
+        <input-field 
+            legend="password" 
+            inputType="password"
+            mainIconSrc="icon-password"
+            [iconEye]="true">
+        </input-field>
+        <!-- ? OR  -->
+        <div class="or-cont">
+            <div class="line"></div>
+            <p> {{  'auth.login.or' | translate:ts.GetLang }} </p>
+            <div class="line"></div>
+        </div>
+    
+        <!-- ? BUTTONS CONTAINER -->
+        <div class="btn-cont">
+            <!-- ? Google -->
+            <button type="submit" class="btn_ btn_secondary"> 
+                <!-- ICON -->
+                <img class="icon_sm" src="../../../../../assets/theme/light/logos/logo-google.svg" alt="Google logo">
+                {{ 'button.google' | translate:ts.GetLang }} 
+            </button>
+            
+            <!-- ? Discord -->
+            <button type="submit" class="btn_ btn_discord"> 
+                <!-- ICON -->
+                <img class="icon_sm" src="../../../../../assets/theme/light/logos/logo-discord.svg" alt="Discord logo">
+                {{ 'button.discord' | translate:ts.GetLang }} 
+            </button>
+    
+            <!-- Login -->
+            <button type="submit" class="btn_ btn_primary"> 
+                {{ 'button.login' | translate:ts.GetLang }} 
+            </button>
+    
+        </div>
+        <!-- ? TEXT FOOTER -->
+        <div class="txt-footer">
+            <p class="font_c1 font_medium color_primary">
+                {{ 'auth.login.dont-have' | translate:ts.GetLang }}
+                <a class="color_link" routerLink="./create-account" > 
+                    {{ 'auth.login.create' | translate:ts.GetLang }} 
+                </a> 
+            </p>
+            
+        </div>
+        <div class="txt-footer">
+            <p class="font_c1 font_medium color_link">
+                {{ 'auth.login.forgot' | translate:ts.GetLang }}
+            </p>
 
         </div>
-
+    
     </form>
 
 </div>   

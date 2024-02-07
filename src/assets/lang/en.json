@@ -7,7 +7,7 @@
         "notEqual":"Passwords do not match",
         "userError":"User or password wrong"
     },
-    "buttons":{
+    "button":{
         "login":"Login",
         "back":"Back",
         "send":"Send",
@@ -15,15 +15,21 @@
         "google":"Join with Google",
         "discord":"Join with Discord"
     },
+    "menu-auth":{
+        "login":"Welcome back",
+        "forgot-password":"I forgot my password",
+        "create-account":"Create an account"
+    },
     "auth": {
         "login":{
             "title":"Sing in",
-            "username":"username | email",
+            "username":"email / username",
             "password":"password",
             "password-confirm":"confirm your password",
             "or":"or",
-            "forgot":"Forgot password?",
-            "create":"Create account"
+            "dont-have":"You don't have an account?",
+            "create":"Create account",
+            "forgot":"Forgot password?"
         },
         "create-account": {
             "policity"  :"I agree to the usage policies on BattleTimes"

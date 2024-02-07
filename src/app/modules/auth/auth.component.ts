@@ -1,5 +1,5 @@
 // * Angular
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 // * Components
 import { LocalStorageService } from '../../core/services/localstorage.service';
@@ -23,6 +23,7 @@ import { ModeComponent } from '@shared/components/mode/mode.component';
 })
 export default class AuthComponent {
 
-  constructor( public localService : LocalStorageService ) {}
+  public localService = inject( LocalStorageService );
+
   
 }

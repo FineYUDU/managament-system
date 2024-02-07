@@ -60,6 +60,9 @@ input::placeholder {
 .color_primary_300 {
     color: var(--color-primary-300);
 }
+.color_link {
+    color: var(--blue-300);
+}
 /* * Brand */
 .color_brand {
     color: var(--color-brand);
@@ -69,6 +72,10 @@ input::placeholder {
 }
 .color_brand_high {
     color: var(--color-brand-high);
+}
+/* * Primitive */
+.color_danger {
+    color: var(--danger);
 }
 /* ? Size --------------> */
 /* * Headlines */
@@ -107,26 +114,76 @@ input::placeholder {
 .font_c3 {
     font-size: var(--font-c3);
 }
-/* ? BUTTONS -------------------------------------------------> */
-/* * Button primary */
-/* .btn_primary {
-} */
-/* ? INPUTS -------------------------------------------------> */
-/* * Input */
-.input_cont {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-.input_cont input {
-    background-color: var(--color-primary-50);
-    border:.0625rem solid var(--color-primary-100);
-    border-radius: var(--radius-minimal);
-    padding: var(--spacing-xs) var(--spacing-sm);
-}
-.input_cont img:first-child {
-    position: absolute;
-    left: var(--spacing-2);
+.icon_sm {
     width: var(--icon-sm);
     height: var(--icon-sm);
+}
+/* ? BUTTONS -------------------------------------------------> */
+/* * Button Defaul Classes */
+.btn_ {
+    border: .0625rem solid transparent ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-minimal);
+    gap: var(--gap);
+    cursor: pointer;
+}
+/* ICON */
+.btn_ img {
+    width: var(--icon-sm);
+    height: var(--icon-sm);
+}
+/* ! If button has an image */
+.btn_:has(img) {
+    --gap:var(--spacing-xs)
+}
+/* * BTN STYLES */
+/* ? BUTTON PRIMARY */
+/* Default */
+.btn_primary {
+    color: var(--color-primary-50);
+    outline: .0625rem solid var(--color-primary) ;
+    background-color: var(--color-primary);
+}
+/* Hover */
+.btn_primary:hover {
+    color: var(--color-primary-50);
+    outline: .0625rem solid var(--color-primary-200) ;
+    background-color: var(--color-primary-200);
+}
+/* Active */
+.btn_primary:active {
+    color: var(--color-primary-100);
+    outline: .0625rem solid var(--color-primary-300) ;
+    background-color: var(--color-primary-300);
+}
+
+/* ? BUTTON DISCORD */
+/* Default */
+.btn_discord {
+    color: var(--color-primary-50);
+    outline: .0625rem solid #6370f9;
+    background-color: #5865F2;
+}
+/* Hover */
+.btn_discord:hover {
+    color: var(--color-primary-50);
+    outline: .0625rem solid #6672f5;
+    background-color: #6672f5;
+}
+/* Active */
+.btn_discord:active {
+    opacity: 2;
+    color: var(--color-primary-50);
+    outline: .0625rem solid #4655f3;
+    background-color: #5865F2;
+}
+
+/* ? BUTTON SECONDARY */
+.btn_secondary {
+    color: var(--color-primary);
+    outline: .0625rem solid var(--color-primary-200);
+    background-color: var(--color-primary-50);
 }

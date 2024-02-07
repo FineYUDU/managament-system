@@ -9,7 +9,7 @@ export class LocalStorageService {
     constructor() {}
 
     // * Get Mode
-    GetMode():string | null {
+    get GetMode():string | null {
         let mode = localStorage.getItem('theme');
         return mode;
     }

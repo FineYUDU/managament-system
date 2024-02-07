@@ -1,0 +1,117 @@
+
+input {
+    font-size: var(--font-b2);
+    color: var(--color-primary);
+    font-weight: var(--font-medium);
+}
+input:focus {
+    color: var(--color-primary-100);
+    font-weight: var(--font-medium);
+}
+input::placeholder {
+    color: var(--color-primary-100);
+    font-weight: var(--font-medium);
+}
+/* ! FIELD */
+.field_ {
+    position: relative;
+}
+/* ? INPUTS -----------------------------> */
+/* ! CONTAINER */
+.input_cont {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+}
+/* ? HEADER  */
+.header_ {
+    display: flex;
+    justify-content: space-between;
+}
+/* ? ICON CONTAINER  */
+.icon_cont {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2xs);
+    cursor: pointer;
+}
+/* ALL ICONS */
+.input_cont img {
+    width: var(--icon-sm);
+    height: var(--icon-sm);
+}
+/* INPUT */
+.input_ {
+    position: relative;
+    min-width: 316px;
+}
+.icon_main {
+    position: absolute;
+    left: var(--spacing-sm);
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* * PRIMARY */
+.primary_input {
+    border: .0625rem solid transparent;
+    outline:.0625rem solid var(--color-primary-100);
+    background-color: var(--color-bg-primary);
+    color: var(--color-primary);
+    border-radius: var(--radius-xs);
+    font-size: var(--font-b2);
+    font-weight: var(--font-medium);
+    padding:var(--spacing-xs) var(--spacing-sm);
+    padding-left: var(--left, var(--spacing-sm));
+    /* * Evita que el padding se desborde */
+    width: -webkit-fill-available;
+    transition:background-color .2s ease-in-out;
+}
+/* FOCUS VISIBLE */
+.primary_input:focus-visible {
+    outline:.0625rem solid var(--color-brand-soft);
+    color: var(--color-primary);
+}
+/* PLACEHOLDER */
+.primary_input::placeholder {
+    color: var(--color-primary-100);
+}
+/* HOVER */
+.primary_input:hover {
+    outline:.0625rem solid var(--color-primary-300);
+}
+
+/* ! ERROR -------------------------------------> */
+.input_error {
+    outline:.0625rem solid var(--danger);
+}
+/* FOCUS VISIBLE */
+.input_error:focus-visible {
+    outline:.0625rem solid var(--danger);
+}
+/* HOVER */
+.input_error:hover {
+    outline:.0625rem solid var(--danger);
+}
+/* ! ERROR MSN ------------------------------> */
+.input_error_msn {
+    position: absolute;
+    bottom: calc(-.875rem - var(--spacing-2));
+}
+.input_disabled {
+    outline: .0625rem solid var(--color-bg-tertiary);
+    background-color: transparent;
+    color: var(--color-primary-100);
+    font-weight: var(--font-regular);
+}
+.input_disabled:hover {
+    outline: .0625rem solid transparent;
+    background-color: transparent;
+    color: var(--color-fg-quaternary);
+    font-weight: var(--font-regular);
+}
+
+/* * If input has an icon */
+.input_:has(.icon_main) {
+    --left:calc(var(--spacing-sm) + .625rem);
+}

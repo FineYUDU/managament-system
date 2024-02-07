@@ -4,8 +4,15 @@ import { Component } from '@angular/core';
   selector: 'version',
   standalone: true,
   imports: [],
-  templateUrl: './version.component.html',
-  styleUrl: './version.component.css'
+  template: `
+    <p class="font_c1 color_primary_100 font_medium">
+      {{companyName}} 
+      <span class="font_regular color_primary_100">
+        ©2024 {{dashVersion}}
+      </span>
+    </p>
+
+  `
 })
 export class VersionComponent {
 

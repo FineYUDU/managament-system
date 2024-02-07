@@ -7,7 +7,7 @@
 		"notEqual":"Contraseñas no hacen match",
         "userError":"Usuario o contraseña invalido"
 	},
-    "buttons":{
+    "button":{
         "login":"Inicia sesión",
         "back":"Volver",
         "send":"Enviar",
@@ -15,15 +15,21 @@
         "google":"Unirse con Google",
         "discord":"Unirse con Discord"
     },
+    "menu-auth":{
+        "login":"Bienvenido",
+        "forgot-password":"Olvide mi contraseña",
+        "create-account":"Crear una cuenta"
+    },
     "auth": {
         "login":{
             "title":"Iniciar sesión",
-            "username":"usuario | correo",
+            "username":"correo / usuario",
             "password":"contraseña",
             "password-confirm":"confirma tu contraseña",
             "or":"ó",
-            "forgot":"¿Olvidaste tu contraseña?",
-            "create":"Crear una cuenta"
+            "dont-have":"¿No tienes cuenta?",
+            "create":"Crear una cuenta",
+            "forgot":"¿Olvidaste tu contraseña?"
         },
         "create-account": {
             "policity"  :"Estoy de acuerdo con las políticas de uso en BattleTimes"

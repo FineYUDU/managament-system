@@ -1,0 +1,58 @@
+<!-- ? FIELD | USER NAME -->
+<div class="field_">
+    <!-- LABEL -->
+  <!-- ? INPUT EMAIL CONTAINER-->
+  <label class="input_cont"> 
+        <!-- ? HEADER -->
+        <div class="header_">
+            <!-- LEGEND -->
+            @if( legend ) {
+                <legend class="font_b2 font_medium color_primary"> 
+                    {{  legend  }} 
+                </legend>
+            }
+            <!-- ? ICON CONTAINER -->
+            @if(iconEye) {
+                <div class="icon_cont" (click)="changeTypePassword()">
+                    <!-- ICON -->
+                    <img [src]="'../../../../assets/theme/'+localService.GetMode+'/icons/icon-type-'+inputType+'.svg'">
+                    <!-- TXT -->
+                    @if(inputType === 'text') {
+                        <p class="font_b2 color_primary_100 font_regular"> {{ 'Hide' }} </p>
+                    }
+                    @else if(inputType === 'password') {
+                        <p class="font_b2 color_primary_100 font_regular"> {{ 'Show' }} </p>
+                    }
+                </div>
+            }
+        </div>
+        <div class="input_">
+            <!-- INPUT -->
+            <input [type]="inputType" 
+                    (change)="changeText($event)"
+                    maxlength="50"
+                    placeholder="user"
+                    [disabled]="isDisabled"
+                    [value]="fieldValue"
+                    class="primary_input"
+                    [ngClass]="{
+                        'input_error'     : Submitted,
+                        'input_disabled'  : isDisabled
+            }">
+            @if (mainIconSrc) {
+                <!-- ICON MAIN -->
+                <img class="icon_main" [src]="'../../../../assets/theme/'+localService.GetMode+'/icons/'+mainIconSrc+'.svg'">
+            }
+        </div>
+
+  </label>
+
+
+  <!-- ! ERROR MSN -->
+  @if ( Submitted ) {
+      <span  class="font_b2 font_regular color_danger input_error_msn"> 
+          {{ ValidationMessage }} 
+      </span>
+  }
+  
+</div>
