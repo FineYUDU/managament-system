@@ -1,4 +1,9 @@
 {
+    "lang":{
+    "selected":"español",
+    "es":"español",
+    "en":"inglés"
+    }, 
     "msn-error":{
 		"required":"Este campo es requerido",
         "minLength3":"Mínimo 3 caracteres",

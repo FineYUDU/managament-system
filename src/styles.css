@@ -5,26 +5,10 @@
     font-weight: var(--font-medium);
     font-size: var(--font-b1);
     color: var(--color-primary);
+    transition: all .2s ease-in-out;
 }
 a {
     text-decoration: none;
-}
-button {
-    border: none;
-}
-input {
-    font-size: var(--font-b1);
-    color: var(--color-primary);
-    font-weight: var(--font-regular);
-    border: none;
-}
-input:focus {
-    color: var(--color-primary);
-    font-weight: var(--font-regular);
-}
-input::placeholder {
-    color: var(--color-primary-100);
-    font-weight: var(--font-regular);
 }
 ::marker {
     color: transparent;

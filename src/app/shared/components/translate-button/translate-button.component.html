@@ -1,0 +1,36 @@
+<!-- ? TRANSLATE CONTAINER -->
+<ul>
+    <!-- ? LI LANGUAGE-->
+    <li class="li-lang">
+        <!-- ? LINK TRANSLATE -->
+        <div>
+            <a class="link-translate">
+                <!-- INPUT CHECKED -->
+                <input type="checkbox">
+                <!-- ? LINK LANG -->
+                <div class="lang-link">
+                    <!-- ICON LANG -->
+                    <img src="../../../../assets/theme/light/icons/icon-translate.svg">
+                    {{ 'lang.selected' | translate:ts.GetLang }}
+                </div>
+                <!-- ICON CHEVRON -->
+                <img class="icon-chevron" src="../../../../assets/theme/light/icons/icon-chevron.svg">
+
+            </a>
+            <div class="dropdown">
+                <ul>
+                    <!-- ES -->
+                    <li (click)="ChangeLang('es')" 
+                        [class]="{ 'selected' : GetLang === 'es' }">
+                        {{ 'lang.es' | translate:ts.GetLang }}
+                    </li>
+                    <!-- EN -->
+                    <li (click)="ChangeLang('en')"
+                        [class]="{ 'selected' : GetLang === 'en' }">
+                        {{ 'lang.en' | translate:ts.GetLang }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </li>
+</ul>
